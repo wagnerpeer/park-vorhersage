@@ -4,4 +4,6 @@ dependencies:
   - BeautifulSoup4
   - cachetools
   - jupyter
+  - pylint
   - selenium
+  - sphinx
