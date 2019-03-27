@@ -1,7 +1,12 @@
-# Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / temporary / DLL files
+*~
 __pycache__/
+.cache/*
 *.py[cod]
 *$py.class
+*.orig
+*.log
+.*.swp
 
 # C extensions
 *.so
@@ -9,20 +14,20 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
-develop-eggs/
 dist/
+sdist/
 downloads/
-eggs/
-.eggs/
 lib/
 lib64/
 parts/
-sdist/
 var/
 wheels/
-*.egg-info/
 .installed.cfg
+develop-eggs/
 *.egg
+*.egg-info/
+*.eggs/
+eggs/
 MANIFEST
 
 # PyInstaller
@@ -46,6 +51,7 @@ coverage.xml
 *.cover
 .hypothesis/
 .pytest_cache/
+junit.xml
 
 # Translations
 *.mo
@@ -64,13 +70,15 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+docs/api/*
+docs/_rst/*
+docs/_build/*
 
 # PyBuilder
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+*/.ipynb_checkpoints/*
 
 # pyenv
 .python-version
@@ -106,3 +114,11 @@ venv.bak/
 # VS Code project settings
 .vscode/
 *.code-workspace
+
+# Eclipse + PyDev
+.project
+.pydevproject
+.settings
+
+# PyCharm project settings
+.idea
