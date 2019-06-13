@@ -4,11 +4,11 @@ image:
 
 for:
 -
+  matrix:
+    only:
+      - image: Visual Studio 2017
   environment:
     matrix:
-      only:
-        - image: Visual Studio 2017
-
       - TOXENV: "py3.5"
         PYTHON_HOME: C:\Python35-x64
         PYTHON_VERSION: "3.5"
@@ -24,14 +24,13 @@ for:
 
 for:
 -
+  matrix:
+    only:
+      - image: Ubuntu1804
   environment:
-    matrix:
-      only:
-        - image: Ubuntu1804
-
-      - TOXENV: "py3.5"
-      - TOXENV: "py3.6"
-      - TOXENV: "py3.7"
+    - TOXENV: "py3.5"
+    - TOXENV: "py3.6"
+    - TOXENV: "py3.7"
 
 build: off
 
