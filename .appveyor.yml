@@ -1,8 +1,12 @@
+image:
+  ubuntu1804
+  Visual Studio 2017
+
 environment:
   matrix:
-    - TOXENV: "py35"
-    - TOXENV: "py36"
-    - TOXENV: "py37"
+    - TOXENV: "py3.5"
+    - TOXENV: "py3.6"
+    - TOXENV: "py3.7"
 
 build: off
 
