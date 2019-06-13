@@ -11,7 +11,8 @@ environment:
 build: off
 
 install:
-  - pip install wheel tox --user
+  - pip install wheel
+  - pip install tox
 
 test_script:
   - tox
