@@ -4,15 +4,15 @@ image:
 
 environment:
   matrix:
-    - TOXENV: "py3.5"
+    - TOXENV: "python3.5"
       PY_DIR: C:\Python35-x64
       PYTHON_VERSION: "3.5"
       PYTHON_ARCH: '64'
-    - TOXENV: "py3.6"
+    - TOXENV: "python3.6"
       PY_DIR: C:\Python36-x64
       PYTHON_VERSION: "3.6"
       PYTHON_ARCH: '64'
-    - TOXENV: "py3.7"
+    - TOXENV: "python3.7"
       PY_DIR: C:\Python37-x64
       PYTHON_VERSION: "3.7"
       PYTHON_ARCH: '64'
