@@ -2,37 +2,25 @@ image:
   - Ubuntu1804
   - Visual Studio 2017
 
-for:
--
+environment:
   matrix:
-    only:
-      - image: Visual Studio 2017
-  environment:
-    matrix:
-      - TOXENV: "py3.5"
-        PYTHON_HOME: C:\Python35-x64
-        PYTHON_VERSION: "3.5"
-        PYTHON_ARCH: '64'
-      - TOXENV: "py3.6"
-        PYTHON_HOME: C:\Python36-x64
-        PYTHON_VERSION: "3.6"
-        PYTHON_ARCH: '64'
-      - TOXENV: "py3.7"
-        PYTHON_HOME: C:\Python37-x64
-        PYTHON_VERSION: "3.7"
-        PYTHON_ARCH: '64'
-
-for:
--
-  matrix:
-    only:
-      - image: Ubuntu1804
-  environment:
     - TOXENV: "py3.5"
+      PY_DIR: C:\Python35-x64
+      PYTHON_VERSION: "3.5"
+      PYTHON_ARCH: '64'
     - TOXENV: "py3.6"
+      PY_DIR: C:\Python36-x64
+      PYTHON_VERSION: "3.6"
+      PYTHON_ARCH: '64'
     - TOXENV: "py3.7"
+      PY_DIR: C:\Python37-x64
+      PYTHON_VERSION: "3.7"
+      PYTHON_ARCH: '64'
 
 build: off
+
+init:
+  - cmd: set PATH=%PY_DIR%;%PY_DIR%\Scripts;%PATH%
 
 install:
   - pip install --upgrade pip
