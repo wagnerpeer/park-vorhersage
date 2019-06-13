@@ -2,16 +2,41 @@ image:
   - Ubuntu1804
   - Visual Studio 2017
 
-environment:
-  matrix:
-    - TOXENV: "py3.5"
-    - TOXENV: "py3.6"
-    - TOXENV: "py3.7"
+for:
+-
+  environment:
+    matrix:
+      only:
+        - image: Visual Studio 2017
+
+      - TOXENV: "py3.5"
+        PYTHON_HOME: C:\Python35-x64
+        PYTHON_VERSION: "3.5"
+        PYTHON_ARCH: '64'
+      - TOXENV: "py3.6"
+        PYTHON_HOME: C:\Python36-x64
+        PYTHON_VERSION: "3.6"
+        PYTHON_ARCH: '64'
+      - TOXENV: "py3.7"
+        PYTHON_HOME: C:\Python37-x64
+        PYTHON_VERSION: "3.7"
+        PYTHON_ARCH: '64'
+
+for:
+-
+  environment:
+    matrix:
+      only:
+        - image: Ubuntu1804
+
+      - TOXENV: "py3.5"
+      - TOXENV: "py3.6"
+      - TOXENV: "py3.7"
 
 build: off
 
 install:
-  - pip install wheel
+  - pip install --upgrade pip
   - pip install tox
 
 test_script:
